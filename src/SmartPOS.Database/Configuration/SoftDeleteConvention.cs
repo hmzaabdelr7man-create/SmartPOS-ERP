@@ -2,7 +2,7 @@ namespace SmartPOS.Database.Configuration;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using SmartPOS.Domain.Common;
+using SmartPOS.Core.Common;
 
 /// <summary>
 /// Applies a global query filter that excludes soft deleted entities from all queries.

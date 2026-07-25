@@ -7,6 +7,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using SmartPOS.Application.Common.Exceptions;
 using SmartPOS.Application.CQRS.Behaviors;
+using SmartPOS.Contracts.Errors;
 
 /// <summary>
 /// Extension methods that register the application layer services with the dependency injection container.

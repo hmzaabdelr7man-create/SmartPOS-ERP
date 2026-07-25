@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SmartPOS.Contracts</RootNamespace>
+    <AssemblyName>SmartPOS.Contracts</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartPOS.Core\SmartPOS.Core.csproj" />
+  </ItemGroup>
+</Project>

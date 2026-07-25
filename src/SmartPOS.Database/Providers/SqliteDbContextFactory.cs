@@ -1,7 +1,7 @@
 namespace SmartPOS.Database.Providers;
 
 using Microsoft.EntityFrameworkCore;
-using SmartPOS.Shared.Configuration;
+using SmartPOS.Core.Configuration;
 
 /// <summary>
 /// Configures the <see cref="AppDbContext" /> to use the SQLite database provider.

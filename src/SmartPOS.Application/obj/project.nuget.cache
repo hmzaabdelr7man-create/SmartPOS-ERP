@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "dgSpecHash": "IFDbpXePl8k=",
+  "success": false,
+  "projectFilePath": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hmza\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\Hmza\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
+    "C:\\Users\\Hmza\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.10.0\\fluentvalidation.dependencyinjectionextensions.11.10.0.nupkg.sha512",
+    "C:\\Users\\Hmza\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\Hmza\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Hmza\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Hmza\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Hmza\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\Hmza\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'E:\\project\\src\\SmartPOS.Contracts\\SmartPOS.Contracts.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "projectPath": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj",
+      "filePath": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj",
+      "libraryId": "E:\\project\\src\\SmartPOS.Contracts\\SmartPOS.Contracts.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "projectPath": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj",
+      "filePath": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj",
+      "libraryId": "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

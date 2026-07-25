@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartPOS.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:SmartPOS.Domain.Exceptions.DomainException">
+            <summary>
+            The exception that is thrown when a domain invariant is violated.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Domain.Exceptions.DomainException.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Domain.Exceptions.DomainException" /> class with a specified error message.</summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:SmartPOS.Domain.Exceptions.DomainException.#ctor(System.String,System.Exception)">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Domain.Exceptions.DomainException" /> class with a specified error message and a reference to the inner exception that caused this exception.</summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:SmartPOS.Domain.Repositories.IRepository`1">
+            <summary>
+            Provides generic read and write access to the entities of a given type.
+            </summary>
+            <typeparam name="T">The type of entity managed by the repository.</typeparam>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IRepository`1.GetByIdAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>Gets the entity with the specified identifier.</summary>
+            <param name="id">The unique identifier of the entity.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The entity if found; otherwise <see langword="null" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IRepository`1.Query">
+            <summary>Gets a queryable sequence representing the entities of the repository.</summary>
+            <returns>An <see cref="T:System.Linq.IQueryable`1" /> that can be used to compose queries.</returns>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IRepository`1.ListAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)">
+            <summary>Gets a list of entities matching the optional predicate.</summary>
+            <param name="predicate">An optional filter predicate.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A read-only list of matching entities.</returns>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IRepository`1.AddAsync(`0,System.Threading.CancellationToken)">
+            <summary>Adds a new entity to the repository.</summary>
+            <param name="entity">The entity to add.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A task that represents the asynchronous add operation.</returns>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IRepository`1.AddRangeAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)">
+            <summary>Adds a range of new entities to the repository.</summary>
+            <param name="entities">The entities to add.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A task that represents the asynchronous add operation.</returns>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IRepository`1.Update(`0)">
+            <summary>Marks the supplied entity as modified so that it will be updated on save.</summary>
+            <param name="entity">The entity to update.</param>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IRepository`1.Remove(`0)">
+            <summary>Removes the supplied entity from the repository.</summary>
+            <param name="entity">The entity to remove.</param>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Threading.CancellationToken)">
+            <summary>Gets the number of entities matching the optional predicate.</summary>
+            <param name="predicate">An optional filter predicate.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The number of matching entities.</returns>
+        </member>
+        <member name="T:SmartPOS.Domain.Repositories.IUnitOfWork">
+            <summary>
+            Coordinates unit of work semantics across multiple repositories and exposes transactional control.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IUnitOfWork.Repository``1">
+            <summary>Gets the repository for the specified entity type.</summary>
+            <typeparam name="T">The type of entity managed by the repository.</typeparam>
+            <returns>An <see cref="T:SmartPOS.Domain.Repositories.IRepository`1" /> instance.</returns>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IUnitOfWork.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>Persists all pending changes tracked by the unit of work.</summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The number of state entries written to the database.</returns>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IUnitOfWork.BeginTransactionAsync(System.Threading.CancellationToken)">
+            <summary>Begins a new database transaction.</summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A task that represents the asynchronous begin operation.</returns>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IUnitOfWork.CommitTransactionAsync(System.Threading.CancellationToken)">
+            <summary>Commits the active database transaction.</summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A task that represents the asynchronous commit operation.</returns>
+        </member>
+        <member name="M:SmartPOS.Domain.Repositories.IUnitOfWork.RollbackTransactionAsync(System.Threading.CancellationToken)">
+            <summary>Rolls back the active database transaction.</summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A task that represents the asynchronous rollback operation.</returns>
+        </member>
+        <member name="T:SmartPOS.Domain.Specifications.ISpecification`1">
+            <summary>
+            Defines a specification that can be used to evaluate whether a candidate satisfies a business rule.
+            </summary>
+            <typeparam name="T">The type of candidate evaluated by the specification.</typeparam>
+        </member>
+        <member name="M:SmartPOS.Domain.Specifications.ISpecification`1.IsSatisfiedBy(`0)">
+            <summary>Determines whether the supplied candidate satisfies the specification.</summary>
+            <param name="candidate">The candidate to evaluate.</param>
+            <returns><see langword="true" /> if the candidate satisfies the specification; otherwise <see langword="false" />.</returns>
+        </member>
+    </members>
+</doc>

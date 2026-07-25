@@ -3,7 +3,7 @@ namespace SmartPOS.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using SmartPOS.Database;
-using SmartPOS.Domain.Common;
+using SmartPOS.Core.Common;
 using SmartPOS.Domain.Repositories;
 
 /// <summary>

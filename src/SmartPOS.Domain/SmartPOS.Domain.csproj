@@ -5,6 +5,6 @@
     <AssemblyName>SmartPOS.Domain</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SmartPOS.Shared\SmartPOS.Shared.csproj" />
+    <ProjectReference Include="..\SmartPOS.Core\SmartPOS.Core.csproj" />
   </ItemGroup>
 </Project>

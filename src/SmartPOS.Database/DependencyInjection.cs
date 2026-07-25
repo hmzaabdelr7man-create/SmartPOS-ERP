@@ -2,9 +2,10 @@ namespace SmartPOS.Database;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using SmartPOS.Database.Providers;
-using SmartPOS.Shared.Configuration;
-using SmartPOS.Shared.Enums;
+using SmartPOS.Core.Configuration;
+using SmartPOS.Core.Enums;
 
 /// <summary>
 /// Extension methods that register the database layer services with the dependency injection container.
@@ -36,6 +37,8 @@ public static class DependencyInjection
                 dbOptions.EnableSensitiveDataLogging();
             }
         });
+
+        services.AddSingleton<IOptions<DatabaseOptions>>(Options.Create(options));
 
         return services;
     }

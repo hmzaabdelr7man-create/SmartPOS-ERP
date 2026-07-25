@@ -1,6 +1,6 @@
 namespace SmartPOS.Application.Abstractions.Printing;
 
-using SmartPOS.Shared.Enums;
+using SmartPOS.Core.Enums;
 
 /// <summary>
 /// Describes the options used when submitting a print job.

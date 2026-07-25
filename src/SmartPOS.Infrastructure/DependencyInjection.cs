@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Extensions.Logging;
-using SmartPOS.Application.Abstractions;
+using SmartPOS.Contracts.Services;
 using SmartPOS.Domain.Repositories;
 using SmartPOS.Infrastructure.Logging;
 using SmartPOS.Infrastructure.Persistence;

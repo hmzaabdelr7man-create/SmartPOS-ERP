@@ -1,7 +1,7 @@
 namespace SmartPOS.Domain.Repositories;
 
 using System.Linq.Expressions;
-using SmartPOS.Domain.Common;
+using SmartPOS.Core.Common;
 
 /// <summary>
 /// Provides generic read and write access to the entities of a given type.

@@ -3,8 +3,8 @@ namespace SmartPOS.UI.Services;
 using System.Globalization;
 using System.Threading;
 using System.Windows;
-using SmartPOS.Application.Abstractions;
-using SmartPOS.Shared.Enums;
+using SmartPOS.Contracts.Services;
+using SmartPOS.Core.Enums;
 
 /// <summary>
 /// A WPF implementation of <see cref="ILanguageService" /> that switches culture, resource dictionary and flow direction.

@@ -1,7 +1,7 @@
 namespace SmartPOS.Application.CQRS.Commands;
 
 using MediatR;
-using SmartPOS.Application.Common;
+using SmartPOS.Core.Common;
 
 /// <summary>
 /// Marks a command that returns a value of type <typeparamref name="TResponse" />.

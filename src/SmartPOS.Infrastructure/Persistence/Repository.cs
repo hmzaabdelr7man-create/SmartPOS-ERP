@@ -2,7 +2,7 @@ namespace SmartPOS.Infrastructure.Persistence;
 
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using SmartPOS.Domain.Common;
+using SmartPOS.Core.Common;
 using SmartPOS.Domain.Repositories;
 
 /// <summary>

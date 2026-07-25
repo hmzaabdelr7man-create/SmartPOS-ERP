@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SmartPOS.Core</RootNamespace>
+    <AssemblyName>SmartPOS.Core</AssemblyName>
+    <NoWarn>$(NoWarn);CA1805</NoWarn>
+  </PropertyGroup>
+</Project>

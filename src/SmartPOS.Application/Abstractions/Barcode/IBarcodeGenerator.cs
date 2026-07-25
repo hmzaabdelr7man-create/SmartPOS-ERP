@@ -1,7 +1,7 @@
 namespace SmartPOS.Application.Abstractions.Barcode;
 
 using System.IO;
-using SmartPOS.Shared.Enums;
+using SmartPOS.Core.Enums;
 
 /// <summary>
 /// Generates barcode images from encoded values.

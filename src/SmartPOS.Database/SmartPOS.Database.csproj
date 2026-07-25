@@ -15,9 +15,10 @@
     <PackageReference Include="Microsoft.Data.Sqlite" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SmartPOS.Core\SmartPOS.Core.csproj" />
     <ProjectReference Include="..\SmartPOS.Domain\SmartPOS.Domain.csproj" />
-    <ProjectReference Include="..\SmartPOS.Shared\SmartPOS.Shared.csproj" />
   </ItemGroup>
 </Project>

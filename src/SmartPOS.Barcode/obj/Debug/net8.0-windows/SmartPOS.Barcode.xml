@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartPOS.Barcode</name>
+    </assembly>
+    <members>
+        <member name="T:SmartPOS.Barcode.BarcodeFeatureModule">
+            <summary>
+            Registers the barcode feature services with the dependency injection container.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Barcode.BarcodeFeatureModule.Register(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <inheritdoc />
+        </member>
+        <member name="T:SmartPOS.Barcode.Generators.BarcodeGenerator">
+            <summary>
+            Generates barcode images using the ZXing and QRCoder libraries.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Barcode.Generators.BarcodeGenerator.Generate(System.String,SmartPOS.Core.Enums.BarcodeSymbology,System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

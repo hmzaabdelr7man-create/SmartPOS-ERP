@@ -15,7 +15,8 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SmartPOS.Core\SmartPOS.Core.csproj" />
+    <ProjectReference Include="..\SmartPOS.Contracts\SmartPOS.Contracts.csproj" />
     <ProjectReference Include="..\SmartPOS.Domain\SmartPOS.Domain.csproj" />
-    <ProjectReference Include="..\SmartPOS.Shared\SmartPOS.Shared.csproj" />
   </ItemGroup>
 </Project>

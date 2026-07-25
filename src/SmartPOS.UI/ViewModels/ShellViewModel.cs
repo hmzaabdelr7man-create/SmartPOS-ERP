@@ -4,8 +4,9 @@ using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using SmartPOS.Application.Abstractions;
-using SmartPOS.Shared.Enums;
+using SmartPOS.Contracts.Services;
+using SmartPOS.Core.Configuration;
+using SmartPOS.Core.Enums;
 using SmartPOS.UI.Navigation;
 
 /// <summary>
@@ -60,7 +61,7 @@ public partial class ShellViewModel : ObservableObject
     private async Task ToggleThemeAsync()
     {
         _themeService.Toggle();
-        await _settingsService.SetAsync(new SmartPOS.Shared.Configuration.ThemeOptions { Current = _themeService.CurrentTheme }).ConfigureAwait(true);
+        await _settingsService.SetAsync(new SmartPOS.Core.Configuration.ThemeOptions { Current = _themeService.CurrentTheme }).ConfigureAwait(true);
     }
 
     /// <summary>Gets the command used to toggle between the Arabic and English languages.</summary>
@@ -68,7 +69,7 @@ public partial class ShellViewModel : ObservableObject
     private async Task ToggleLanguageAsync()
     {
         _languageService.Toggle();
-        await _settingsService.SetAsync(new SmartPOS.Shared.Configuration.LanguageOptions { Current = _languageService.CurrentLanguage }).ConfigureAwait(true);
+        await _settingsService.SetAsync(new SmartPOS.Core.Configuration.LanguageOptions { Current = _languageService.CurrentLanguage }).ConfigureAwait(true);
     }
 
     /// <summary>Gets the command used to navigate to a page with the specified key.</summary>

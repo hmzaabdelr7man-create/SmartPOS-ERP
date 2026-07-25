@@ -1,6 +1,6 @@
 namespace SmartPOS.Domain.Repositories;
 
-using SmartPOS.Domain.Common;
+using SmartPOS.Core.Common;
 
 /// <summary>
 /// Coordinates unit of work semantics across multiple repositories and exposes transactional control.

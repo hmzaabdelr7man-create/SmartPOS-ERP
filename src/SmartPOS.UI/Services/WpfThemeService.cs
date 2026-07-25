@@ -1,8 +1,8 @@
 namespace SmartPOS.UI.Services;
 
 using System.Windows;
-using SmartPOS.Application.Abstractions;
-using SmartPOS.Shared.Enums;
+using SmartPOS.Contracts.Services;
+using SmartPOS.Core.Enums;
 
 /// <summary>
 /// A WPF implementation of <see cref="IThemeService" /> that swaps merged resource dictionaries to change the active theme.

@@ -5,7 +5,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using QRCoder;
 using SmartPOS.Application.Abstractions.Barcode;
-using SmartPOS.Shared.Enums;
+using SmartPOS.Core.Enums;
 using ZXing;
 using ZXing.Common;
 using ZXing.QrCode;

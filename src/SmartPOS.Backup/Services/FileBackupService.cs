@@ -5,7 +5,8 @@ using System.IO.Compression;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SmartPOS.Application.Abstractions.Backup;
-using SmartPOS.Shared.Configuration;
+using SmartPOS.Core.Configuration;
+using SmartPOS.Core.Enums;
 
 /// <summary>
 /// A file-based implementation of <see cref="IBackupService" /> that creates ZIP archives and prunes old backups.
@@ -13,17 +14,61 @@ using SmartPOS.Shared.Configuration;
 public class FileBackupService : IBackupService
 {
     private readonly BackupOptions _options;
+    private readonly DatabaseOptions _databaseOptions;
     private readonly ILogger<FileBackupService> _logger;
     private readonly string _dataSource;
 
     /// <summary>Initializes a new instance of the <see cref="FileBackupService" /> class.</summary>
     /// <param name="options">The backup options describing the destination folder and retention policy.</param>
+    /// <param name="databaseOptions">The database options used to resolve the SQLite data-source file path.</param>
     /// <param name="logger">The logger used to record backup operations.</param>
-    public FileBackupService(IOptions<BackupOptions> options, ILogger<FileBackupService> logger)
+    public FileBackupService(IOptions<BackupOptions> options, IOptions<DatabaseOptions> databaseOptions, ILogger<FileBackupService> logger)
     {
         _options = options.Value;
+        _databaseOptions = databaseOptions.Value;
         _logger = logger;
-        _dataSource = "smartpos.db";
+        _dataSource = ResolveDataSource(_databaseOptions);
+    }
+
+    /// <summary>
+    /// Resolves the SQLite data-source file path from the configured connection string.
+    /// For non-file providers such as PostgreSQL there is no local file to archive and an empty path is returned.
+    /// </summary>
+    private static string ResolveDataSource(DatabaseOptions databaseOptions)
+    {
+        if (databaseOptions.Provider != DatabaseProvider.Sqlite)
+        {
+            return string.Empty;
+        }
+
+        var dataSource = ExtractValue(databaseOptions.SqliteConnectionString, "Data Source")
+            ?? ExtractValue(databaseOptions.SqliteConnectionString, "DataSource")
+            ?? string.Empty;
+
+        if (string.IsNullOrWhiteSpace(dataSource))
+        {
+            return string.Empty;
+        }
+
+        return Path.IsPathRooted(dataSource)
+            ? dataSource
+            : Path.Combine(AppContext.BaseDirectory, dataSource);
+    }
+
+    /// <summary>Extracts the value of a key from a key=value connection string.</summary>
+    private static string? ExtractValue(string connectionString, string key)
+    {
+        var segments = connectionString.Split(';', StringSplitOptions.RemoveEmptyEntries);
+        foreach (var segment in segments)
+        {
+            var parts = segment.Split('=', 2, StringSplitOptions.TrimEntries);
+            if (parts.Length == 2 && string.Equals(parts[0], key, StringComparison.OrdinalIgnoreCase))
+            {
+                return parts[1].Trim();
+            }
+        }
+
+        return null;
     }
 
     /// <inheritdoc />
@@ -39,12 +84,20 @@ public class FileBackupService : IBackupService
         await using (var archiveStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
         using (var archive = new ZipArchive(archiveStream, ZipArchiveMode.Create))
         {
-            if (File.Exists(_dataSource))
+            if (string.IsNullOrEmpty(_dataSource))
+            {
+                _logger.LogWarning("Skipping database file backup: provider {Provider} has no local data file.", _databaseOptions.Provider);
+            }
+            else if (File.Exists(_dataSource))
             {
                 var entry = archive.CreateEntry(Path.GetFileName(_dataSource));
                 await using var entryStream = entry.Open();
                 await using var sourceStream = new FileStream(_dataSource, FileMode.Open, FileAccess.Read, FileShare.Read);
                 await sourceStream.CopyToAsync(entryStream, cancellationToken).ConfigureAwait(false);
+            }
+            else
+            {
+                _logger.LogWarning("Database file {DataSource} was not found; an empty archive was created.", _dataSource);
             }
         }
 

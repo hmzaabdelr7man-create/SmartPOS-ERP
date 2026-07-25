@@ -3,7 +3,7 @@ namespace SmartPOS.Database;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using SmartPOS.Database.Configuration;
-using SmartPOS.Domain.Common;
+using SmartPOS.Core.Common;
 
 /// <summary>
 /// The Entity Framework Core database context that mediates between the domain entities and the configured database provider.

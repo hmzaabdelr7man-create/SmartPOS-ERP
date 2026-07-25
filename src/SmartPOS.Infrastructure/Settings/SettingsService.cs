@@ -2,7 +2,7 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using Microsoft.Extensions.Logging;
-using SmartPOS.Application.Abstractions;
+using SmartPOS.Contracts.Services;
 
 namespace SmartPOS.Infrastructure.Settings;
 

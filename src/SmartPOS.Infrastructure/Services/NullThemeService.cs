@@ -1,7 +1,7 @@
 namespace SmartPOS.Infrastructure.Services;
 
-using SmartPOS.Application.Abstractions;
-using SmartPOS.Shared.Enums;
+using SmartPOS.Contracts.Services;
+using SmartPOS.Core.Enums;
 
 /// <summary>
 /// A headless implementation of <see cref="IThemeService" /> that tracks the active theme without interacting with a user interface.

@@ -9,8 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using SmartPOS.Application;
-using SmartPOS.Application.Abstractions;
-using SmartPOS.Application.Common.Exceptions;
+using SmartPOS.Contracts.Errors;
+using SmartPOS.Contracts.Services;
 using SmartPOS.Backup;
 using SmartPOS.Barcode;
 using SmartPOS.Database;
@@ -18,16 +18,16 @@ using SmartPOS.Infrastructure;
 using SmartPOS.Infrastructure.Logging;
 using SmartPOS.Printing;
 using SmartPOS.Reporting;
-using SmartPOS.Shared.Configuration;
-using SmartPOS.Shared.Constants;
-using SmartPOS.Shared.Enums;
+using SmartPOS.Core.Configuration;
+using SmartPOS.Core.Constants;
+using SmartPOS.Core.Enums;
 using SmartPOS.UI.Navigation;
 using SmartPOS.UI.Services;
 using SmartPOS.UI.ViewModels;
 using SmartPOS.UI.Views;
 using SmartPOS.UI.Views.Pages;
 using Application = System.Windows.Application;
-using ErrorSeverity = SmartPOS.Application.Common.Exceptions.ErrorSeverity;
+using ErrorSeverity = SmartPOS.Contracts.Errors.ErrorSeverity;
 using UnhandledExceptionEventArgs = System.UnhandledExceptionEventArgs;
 
 /// <summary>
@@ -106,10 +106,10 @@ public partial class App : Application
         var themeService = _host.Services.GetRequiredService<IThemeService>();
         var languageService = _host.Services.GetRequiredService<ILanguageService>();
 
-        var themeOptions = settings.GetAsync<SmartPOS.Shared.Configuration.ThemeOptions>().GetAwaiter().GetResult();
+        var themeOptions = settings.GetAsync<SmartPOS.Core.Configuration.ThemeOptions>().GetAwaiter().GetResult();
         themeService.ApplyTheme(themeOptions.Current);
 
-        var languageOptions = settings.GetAsync<SmartPOS.Shared.Configuration.LanguageOptions>().GetAwaiter().GetResult();
+        var languageOptions = settings.GetAsync<SmartPOS.Core.Configuration.LanguageOptions>().GetAwaiter().GetResult();
         languageService.ApplyLanguage(languageOptions.Current);
     }
 
