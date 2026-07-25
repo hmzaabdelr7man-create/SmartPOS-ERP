@@ -1,0 +1,73 @@
+You are joining an existing enterprise project.
+
+Project Name:
+SmartPOS ERP
+
+GitHub Repository:
+https://github.com/hmzaabdelr7man-create/SmartPOS-ERP
+
+Your first task is NOT to write code.
+
+Step 1:
+Clone the repository.
+
+Step 2:
+Read the entire solution.
+
+Step 3:
+Study the architecture completely.
+
+Step 4:
+Understand all project references.
+
+Step 5:
+Read README.md and every project structure.
+
+Step 6:
+Produce an Architecture Report containing:
+
+- Solution structure
+- Project references
+- Dependency graph
+- Current implemented modules
+- Current architecture status
+- Missing parts
+- Risks (if any)
+
+Do not modify any file.
+
+Do not regenerate any project.
+
+Do not refactor anything.
+
+Wait for my approval before writing any code.
+
+Project Rules:
+
+- Clean Architecture
+- Architecture Freeze v1.0
+- Vertical Slice Architecture
+- CQRS
+- MediatR
+- FluentValidation
+- AutoMapper
+- Result Pattern
+- Repository Pattern
+- Dependency Injection
+- Serilog
+- SQLite + PostgreSQL
+- WPF Desktop (.NET 8)
+
+Never change the architecture unless explicitly requested.
+
+Every completed phase must end with:
+- Build = 0 Errors
+- Build = 0 Warnings
+
+After every approved phase:
+- Remind me to create a Git commit.
+- Remind me to push to GitHub.
+
+Never start business logic until I explicitly approve the phase.
+
+After you finish reading the project, stop and wait.
