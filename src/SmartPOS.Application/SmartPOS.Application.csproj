@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SmartPOS.Application</RootNamespace>
+    <AssemblyName>SmartPOS.Application</AssemblyName>
+    <NoWarn>$(NoWarn);CA1805;CA1848</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="MediatR.Contracts" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartPOS.Domain\SmartPOS.Domain.csproj" />
+    <ProjectReference Include="..\SmartPOS.Shared\SmartPOS.Shared.csproj" />
+  </ItemGroup>
+</Project>

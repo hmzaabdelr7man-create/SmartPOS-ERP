@@ -1,0 +1,17 @@
+.vs/
+bin/
+obj/
+
+*.user
+*.suo
+*.cache
+*.pdb
+
+TestResults/
+
+packages/
+
+*.db-shm
+*.db-wal
+
+*.log

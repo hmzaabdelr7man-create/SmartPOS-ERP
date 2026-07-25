@@ -1,0 +1,75 @@
+<Window x:Class="SmartPOS.UI.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource Login}"
+        Width="420" Height="480"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="{DynamicResource BackgroundBrush}">
+    <Grid Margin="32">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Smart POS ERP"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource PrimaryBrush}"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,8" />
+
+        <TextBlock Grid.Row="1"
+                   Text="{DynamicResource Login}"
+                   FontSize="16"
+                   Foreground="{DynamicResource TextSecondaryBrush}"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,24" />
+
+        <StackPanel Grid.Row="2" Margin="0,0,0,16">
+            <TextBlock Text="{DynamicResource Username}"
+                       Style="{StaticResource BaseText}"
+                       Margin="0,0,0,4" />
+            <TextBox x:Name="UsernameBox"
+                     FontSize="14"
+                     Padding="8,6"
+                     Background="{DynamicResource SurfaceBrush}"
+                     Foreground="{DynamicResource TextPrimaryBrush}"
+                     BorderBrush="{DynamicResource BorderBrush}"
+                     Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Margin="0,0,0,16">
+            <TextBlock Text="{DynamicResource Password}"
+                       Style="{StaticResource BaseText}"
+                       Margin="0,0,0,4" />
+            <PasswordBox x:Name="PasswordBox"
+                         FontSize="14"
+                         Padding="8,6"
+                         Background="{DynamicResource SurfaceBrush}"
+                         Foreground="{DynamicResource TextPrimaryBrush}"
+                         BorderBrush="{DynamicResource BorderBrush}"
+                         PasswordChanged="OnPasswordChanged" />
+        </StackPanel>
+
+        <TextBlock Grid.Row="4"
+                   x:Name="ErrorText"
+                   Text="Invalid username or password"
+                   Foreground="{DynamicResource DangerBrush}"
+                   FontSize="12"
+                   Visibility="{Binding ErrorVisibility, Converter={StaticResource BooleanToVisibilityConverter}}"
+                   Margin="0,0,0,16" />
+
+        <Button Grid.Row="5"
+                Content="{DynamicResource LoginButton}"
+                Style="{StaticResource PrimaryButton}"
+                Command="{Binding LoginCommand}"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Top" />
+    </Grid>
+</Window>

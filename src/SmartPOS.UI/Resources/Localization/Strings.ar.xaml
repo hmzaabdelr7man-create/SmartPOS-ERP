@@ -1,0 +1,31 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+  <sys:String x:Key="AppTitle">سمارت بوس إي آر بي</sys:String>
+  <sys:String x:Key="Dashboard">لوحة التحكم</sys:String>
+  <sys:String x:Key="Settings">الإعدادات</sys:String>
+  <sys:String x:Key="Theme">السمة</sys:String>
+  <sys:String x:Key="LightTheme">السمة الفاتحة</sys:String>
+  <sys:String x:Key="DarkTheme">السمة الداكنة</sys:String>
+  <sys:String x:Key="Language">اللغة</sys:String>
+  <sys:String x:Key="Arabic">العربية</sys:String>
+  <sys:String x:Key="English">الإنجليزية</sys:String>
+  <sys:String x:Key="Login">تسجيل الدخول</sys:String>
+  <sys:String x:Key="Username">اسم المستخدم</sys:String>
+  <sys:String x:Key="Password">كلمة المرور</sys:String>
+  <sys:String x:Key="LoginButton">دخول</sys:String>
+  <sys:String x:Key="Loading">جارٍ التحميل…</sys:String>
+  <sys:String x:Key="Navigation">التنقل</sys:String>
+  <sys:String x:Key="Home">الرئيسية</sys:String>
+  <sys:String x:Key="Products">المنتجات</sys:String>
+  <sys:String x:Key="Sales">المبيعات</sys:String>
+  <sys:String x:Key="Inventory">المخزون</sys:String>
+  <sys:String x:Key="Reports">التقارير</sys:String>
+  <sys:String x:Key="Logout">تسجيل الخروج</sys:String>
+  <sys:String x:Key="CompanyInformation">معلومات الشركة</sys:String>
+  <sys:String x:Key="Users">المستخدمون</sys:String>
+  <sys:String x:Key="Roles">الأدوار</sys:String>
+  <sys:String x:Key="Permissions">الصلاحيات</sys:String>
+  <sys:String x:Key="LicenseManagement">إدارة الترخيص</sys:String>
+  <sys:String x:Key="Welcome">مرحباً</sys:String>
+</ResourceDictionary>

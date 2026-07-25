@@ -1,0 +1,82 @@
+<Window x:Class="SmartPOS.UI.Views.ShellWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Smart POS ERP"
+        Width="1200" Height="760"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource BackgroundBrush}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Sidebar -->
+        <Border Grid.Column="0"
+                Background="{DynamicResource SidebarBrush}"
+                BorderBrush="{DynamicResource BorderBrush}"
+                BorderThickness="0,0,1,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!-- Branding -->
+                <TextBlock Grid.Row="0"
+                           Text="Smart POS ERP"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Foreground="{DynamicResource PrimaryBrush}"
+                           Margin="20,24,20,24" />
+
+                <!-- Navigation items -->
+                <ListBox Grid.Row="1"
+                         x:Name="NavigationList"
+                         ItemsSource="{Binding NavigationPages}"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Margin="8,0"
+                         SelectionChanged="OnNavigationSelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="8,10">
+                                <TextBlock Text="{Binding IconGlyph}"
+                                           FontSize="16"
+                                           Foreground="{DynamicResource TextSecondaryBrush}"
+                                           VerticalAlignment="Center"
+                                           Margin="0,0,12,0" />
+                                <TextBlock Text="{Binding Key}"
+                                           FontSize="14"
+                                           Foreground="{DynamicResource TextPrimaryBrush}"
+                                           VerticalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <!-- Footer controls -->
+                <StackPanel Grid.Row="2" Margin="12,12,12,16">
+                    <Button Content="{DynamicResource Theme}"
+                            Click="OnToggleTheme"
+                            Margin="0,0,0,8"
+                            HorizontalAlignment="Stretch" />
+                    <Button Content="{DynamicResource Language}"
+                            Click="OnToggleLanguage"
+                            Margin="0,0,0,8"
+                            HorizontalAlignment="Stretch" />
+                    <Button Content="{DynamicResource Logout}"
+                            Click="OnLogout"
+                            HorizontalAlignment="Stretch"
+                            Foreground="{DynamicResource DangerBrush}" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Content host -->
+        <Grid Grid.Column="1">
+            <ContentControl Content="{Binding CurrentView}" />
+        </Grid>
+    </Grid>
+</Window>

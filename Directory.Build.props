@@ -1,0 +1,19 @@
+<Project>
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CA1014;CA1716;NU1903</NoWarn>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Authors>Smart POS ERP</Authors>
+    <Product>Smart POS ERP</Product>
+    <Copyright>Copyright (c) 2024 Smart POS ERP</Copyright>
+    <Version>1.0.0-sprint2</Version>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+  </PropertyGroup>
+
+</Project>

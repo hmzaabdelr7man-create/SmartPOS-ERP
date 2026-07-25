@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>SmartPOS.Barcode</RootNamespace>
+    <AssemblyName>SmartPOS.Barcode</AssemblyName>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <NoWarn>$(NoWarn);CA1859;CA1848</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ZXing.Net" />
+    <PackageReference Include="QRCoder" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartPOS.Application\SmartPOS.Application.csproj" />
+    <ProjectReference Include="..\SmartPOS.Infrastructure\SmartPOS.Infrastructure.csproj" />
+    <ProjectReference Include="..\SmartPOS.Shared\SmartPOS.Shared.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>SmartPOS.UI</RootNamespace>
+    <AssemblyName>SmartPOS.UI</AssemblyName>
+    <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <SatelliteResourceLanguages>ar;en</SatelliteResourceLanguages>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="Serilog.Sinks.File" />
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="AutoMapper" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartPOS.Application\SmartPOS.Application.csproj" />
+    <ProjectReference Include="..\SmartPOS.Backup\SmartPOS.Backup.csproj" />
+    <ProjectReference Include="..\SmartPOS.Barcode\SmartPOS.Barcode.csproj" />
+    <ProjectReference Include="..\SmartPOS.Database\SmartPOS.Database.csproj" />
+    <ProjectReference Include="..\SmartPOS.Domain\SmartPOS.Domain.csproj" />
+    <ProjectReference Include="..\SmartPOS.Infrastructure\SmartPOS.Infrastructure.csproj" />
+    <ProjectReference Include="..\SmartPOS.Printing\SmartPOS.Printing.csproj" />
+    <ProjectReference Include="..\SmartPOS.Reporting\SmartPOS.Reporting.csproj" />
+    <ProjectReference Include="..\SmartPOS.Shared\SmartPOS.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
