@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartPOS.Database</name>
+    </assembly>
+    <members>
+        <member name="T:SmartPOS.Database.AppDbContext">
+            <summary>
+            The Entity Framework Core database context that mediates between the domain entities and the configured database provider.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Database.AppDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{SmartPOS.Database.AppDbContext})">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Database.AppDbContext" /> class.</summary>
+            <param name="options">The options describing how the context should be configured.</param>
+        </member>
+        <member name="M:SmartPOS.Database.AppDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SmartPOS.Database.AppDbContext.SaveChanges">
+            <inheritdoc />
+        </member>
+        <member name="M:SmartPOS.Database.AppDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:SmartPOS.Database.Configuration.SoftDeleteConvention">
+            <summary>
+            Applies a global query filter that excludes soft deleted entities from all queries.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Database.Configuration.SoftDeleteConvention.Apply(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>Applies the soft delete query filter to every entity that implements <see cref="T:SmartPOS.Core.Common.ISoftDeletable" />.</summary>
+            <param name="modelBuilder">The model builder used to shape the entity model.</param>
+        </member>
+        <member name="T:SmartPOS.Database.DependencyInjection">
+            <summary>
+            Extension methods that register the database layer services with the dependency injection container.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Database.DependencyInjection.AddDatabase(Microsoft.Extensions.DependencyInjection.IServiceCollection,SmartPOS.Core.Configuration.DatabaseOptions)">
+            <summary>Registers the <see cref="T:SmartPOS.Database.AppDbContext" /> using the supplied database options.</summary>
+            <param name="services">The service collection to configure.</param>
+            <param name="options">The database options that describe the provider and connection string to use.</param>
+            <returns>The configured service collection.</returns>
+        </member>
+        <member name="T:SmartPOS.Database.Providers.PostgreSqlDbContextFactory">
+            <summary>
+            Configures the <see cref="T:SmartPOS.Database.AppDbContext" /> to use the PostgreSQL database provider.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Database.Providers.PostgreSqlDbContextFactory.Configure(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder,SmartPOS.Core.Configuration.DatabaseOptions)">
+            <summary>Configures the supplied <see cref="T:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder" /> to use PostgreSQL.</summary>
+            <param name="builder">The options builder to configure.</param>
+            <param name="options">The database options containing the PostgreSQL connection string.</param>
+        </member>
+        <member name="T:SmartPOS.Database.Providers.SqliteDbContextFactory">
+            <summary>
+            Configures the <see cref="T:SmartPOS.Database.AppDbContext" /> to use the SQLite database provider.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Database.Providers.SqliteDbContextFactory.Configure(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder,SmartPOS.Core.Configuration.DatabaseOptions)">
+            <summary>Configures the supplied <see cref="T:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder" /> to use SQLite.</summary>
+            <param name="builder">The options builder to configure.</param>
+            <param name="options">The database options containing the SQLite connection string.</param>
+        </member>
+    </members>
+</doc>

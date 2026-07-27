@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartPOS.Core</name>
+    </assembly>
+    <members>
+        <member name="T:SmartPOS.Core.Common.BaseAuditableEntity">
+            <summary>
+            Represents an entity that carries audit metadata describing who created and last modified it.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.BaseAuditableEntity.CreatedBy">
+            <summary>Gets or sets the identifier of the user who created the entity.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.BaseAuditableEntity.UpdatedBy">
+            <summary>Gets or sets the identifier of the user who last modified the entity.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Common.BaseEntity">
+            <summary>
+            Represents the base entity from which all domain entities derive.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.BaseEntity.Id">
+            <summary>Gets or sets the unique identifier of the entity.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.BaseEntity.CreatedAtUtc">
+            <summary>Gets or sets the UTC date and time the entity was created.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.BaseEntity.UpdatedAtUtc">
+            <summary>Gets or sets the UTC date and time the entity was last updated.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Common.Error">
+            <summary>
+            Describes a failure that occurred during an operation.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Core.Common.Error.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Core.Common.Error" /> class with the supplied message.</summary>
+            <param name="message">A human-readable description of the failure.</param>
+        </member>
+        <member name="P:SmartPOS.Core.Common.Error.Message">
+            <summary>Gets a human-readable description of the failure.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.Error.IsEmpty">
+            <summary>Gets a value indicating whether the error represents an empty (successful) state.</summary>
+        </member>
+        <member name="M:SmartPOS.Core.Common.Error.None">
+            <summary>Creates an empty error representing no failure.</summary>
+            <returns>An empty <see cref="T:SmartPOS.Core.Common.Error" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Common.Error.ToString">
+            <summary>Returns the message describing the failure.</summary>
+            <returns>The error message.</returns>
+        </member>
+        <member name="T:SmartPOS.Core.Common.IAggregateRoot">
+            <summary>
+            Marks an entity as the root of an aggregate that can be persisted as a single transactional unit.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.IAggregateRoot.Id">
+            <summary>Gets the unique identifier of the aggregate root.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Common.IMultiTenant">
+            <summary>
+            Marks an entity as belonging to a specific tenant in a multi-tenant deployment.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.IMultiTenant.TenantId">
+            <summary>Gets or sets the identifier of the tenant that owns the entity.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Common.ISoftDeletable">
+            <summary>
+            Marks an entity as supporting soft deletion rather than physical removal.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.ISoftDeletable.IsDeleted">
+            <summary>Gets or sets a value indicating whether the entity has been soft deleted.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.ISoftDeletable.DeletedAtUtc">
+            <summary>Gets or sets the UTC date and time the entity was soft deleted, if applicable.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Common.Result">
+            <summary>
+            Represents the outcome of an operation that does not return a value.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.Result.IsSuccess">
+            <summary>Gets a value indicating whether the operation succeeded.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.Result.IsFailure">
+            <summary>Gets a value indicating whether the operation failed.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.Result.Error">
+            <summary>Gets the error describing why a failed operation failed.</summary>
+        </member>
+        <member name="M:SmartPOS.Core.Common.Result.Ok">
+            <summary>Creates a successful result.</summary>
+            <returns>A successful <see cref="T:SmartPOS.Core.Common.Result" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Common.Result.Fail(SmartPOS.Core.Common.Error)">
+            <summary>Creates a failed result containing the supplied error.</summary>
+            <param name="error">The error describing the failure.</param>
+            <returns>A failed <see cref="T:SmartPOS.Core.Common.Result" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Common.Result.Fail(System.String)">
+            <summary>Creates a failed result containing an error with the supplied message.</summary>
+            <param name="errorMessage">A message describing the failure.</param>
+            <returns>A failed <see cref="T:SmartPOS.Core.Common.Result" />.</returns>
+        </member>
+        <member name="T:SmartPOS.Core.Common.Result`1">
+            <summary>
+            Represents the outcome of an operation that returns a value.
+            </summary>
+            <typeparam name="T">The type of the value produced by a successful operation.</typeparam>
+        </member>
+        <member name="P:SmartPOS.Core.Common.Result`1.IsSuccess">
+            <summary>Gets a value indicating whether the operation succeeded.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.Result`1.IsFailure">
+            <summary>Gets a value indicating whether the operation failed.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.Result`1.Value">
+            <summary>Gets the value produced by a successful operation.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Common.Result`1.Error">
+            <summary>Gets the error describing why a failed operation failed.</summary>
+        </member>
+        <member name="M:SmartPOS.Core.Common.Result`1.Ok(`0)">
+            <summary>Creates a successful result containing the supplied value.</summary>
+            <param name="value">The value produced by the operation.</param>
+            <returns>A successful <see cref="T:SmartPOS.Core.Common.Result`1" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Common.Result`1.Fail(SmartPOS.Core.Common.Error)">
+            <summary>Creates a failed result containing the supplied error.</summary>
+            <param name="error">The error describing the failure.</param>
+            <returns>A failed <see cref="T:SmartPOS.Core.Common.Result`1" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Common.Result`1.Fail(System.String)">
+            <summary>Creates a failed result containing an error with the supplied message.</summary>
+            <param name="errorMessage">A message describing the failure.</param>
+            <returns>A failed <see cref="T:SmartPOS.Core.Common.Result`1" />.</returns>
+        </member>
+        <member name="T:SmartPOS.Core.Configuration.BackupOptions">
+            <summary>
+            Contains the configuration options for the application backup feature.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Configuration.BackupOptions.SectionName">
+            <summary>Gets the configuration section name used to bind these options.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.BackupOptions.DestinationFolder">
+            <summary>Gets or sets the folder where backup archives are stored.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.BackupOptions.BackupOnExit">
+            <summary>Gets or sets a value indicating whether a backup should be created when the application exits.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.BackupOptions.MaxRetainedFiles">
+            <summary>Gets or sets the maximum number of backup files retained before older files are pruned.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Configuration.CompanyOptions">
+            <summary>
+            Contains the configuration options describing the company that operates the application.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Configuration.CompanyOptions.SectionName">
+            <summary>Gets the configuration section name used to bind these options.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.CompanyOptions.Name">
+            <summary>Gets or sets the legal name of the company.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.CompanyOptions.TaxNumber">
+            <summary>Gets or sets the tax registration number of the company.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.CompanyOptions.Address">
+            <summary>Gets or sets the postal address of the company.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.CompanyOptions.Phone">
+            <summary>Gets or sets the contact phone number of the company.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.CompanyOptions.Email">
+            <summary>Gets or sets the contact email address of the company.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.CompanyOptions.Website">
+            <summary>Gets or sets the website address of the company.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.CompanyOptions.ReceiptFooter">
+            <summary>Gets or sets the footer text printed at the bottom of receipts.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Configuration.DatabaseOptions">
+            <summary>
+            Contains the configuration options for the application database.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Configuration.DatabaseOptions.SectionName">
+            <summary>Gets the configuration section name used to bind these options.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.DatabaseOptions.Provider">
+            <summary>Gets or sets the database provider to use for persistence.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.DatabaseOptions.SqliteConnectionString">
+            <summary>Gets or sets the connection string used when the provider is SQLite.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.DatabaseOptions.PostgreSqlConnectionString">
+            <summary>Gets or sets the connection string used when the provider is PostgreSQL.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.DatabaseOptions.AutoMigrate">
+            <summary>Gets or sets a value indicating whether the database schema should be migrated automatically on startup.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.DatabaseOptions.LogSql">
+            <summary>Gets or sets a value indicating whether executed SQL statements should be logged.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Configuration.LanguageOptions">
+            <summary>
+            Contains the configuration options for the display language of the user interface.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Configuration.LanguageOptions.SectionName">
+            <summary>Gets the configuration section name used to bind these options.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.LanguageOptions.Current">
+            <summary>Gets or sets the language applied to the user interface.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Configuration.PrinterOptions">
+            <summary>
+            Contains the configuration options for the printers used by the application.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Configuration.PrinterOptions.SectionName">
+            <summary>Gets the configuration section name used to bind these options.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.PrinterOptions.ReceiptPrinterName">
+            <summary>Gets or sets the name of the printer used for receipts.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.PrinterOptions.ReportPrinterName">
+            <summary>Gets or sets the name of the printer used for reports.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.PrinterOptions.ReceiptPaperSize">
+            <summary>Gets or sets the paper size used when printing receipts.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.PrinterOptions.ReceiptCopies">
+            <summary>Gets or sets the number of copies printed for each receipt.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.PrinterOptions.ShowPrintDialog">
+            <summary>Gets or sets a value indicating whether a print dialog should be shown before printing.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.PrinterOptions.ShowPreview">
+            <summary>Gets or sets a value indicating whether a print preview should be shown before printing.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Configuration.ThemeOptions">
+            <summary>
+            Contains the configuration options for the visual theme of the user interface.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Configuration.ThemeOptions.SectionName">
+            <summary>Gets the configuration section name used to bind these options.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.ThemeOptions.Current">
+            <summary>Gets or sets the theme applied to the user interface.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Configuration.ThemeOptions.FollowSystem">
+            <summary>Gets or sets a value indicating whether the theme should follow the host operating system preference.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Constants.ApplicationConstants">
+            <summary>
+            Contains application-wide constant values that are shared across all layers.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Constants.ApplicationConstants.ProductName">
+            <summary>Gets the product name displayed throughout the application.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Constants.ApplicationConstants.InvariantCulture">
+            <summary>Gets the invariant culture used for storage and formatting of culture-neutral data.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Constants.ApplicationConstants.DefaultUICulture">
+            <summary>Gets the default UI culture used when no user preference has been persisted.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Constants.ApplicationConstants.ConfigFileName">
+            <summary>Gets the file name of the primary application configuration file.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Constants.ApplicationConstants.UserConfigFileName">
+            <summary>Gets the file name of the user-scoped configuration file that overrides the primary settings.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Enums.AppLanguage">
+            <summary>
+            Identifies the display language used by the user interface.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.AppLanguage.Arabic">
+            <summary>Arabic language, rendered right-to-left.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.AppLanguage.English">
+            <summary>English language, rendered left-to-right.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Enums.AppTheme">
+            <summary>
+            Identifies the visual theme applied to the user interface.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.AppTheme.Light">
+            <summary>Light theme with a bright background.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.AppTheme.Dark">
+            <summary>Dark theme with a dark background.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Enums.BarcodeSymbology">
+            <summary>
+            Identifies the barcode symbology used to encode a value.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.BarcodeSymbology.Ean13">
+            <summary>EAN-13 linear barcode for retail products.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.BarcodeSymbology.Code128">
+            <summary>Code 128 linear barcode for dense alphanumeric data.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.BarcodeSymbology.QrCode">
+            <summary>QR Code two-dimensional barcode.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Enums.DatabaseProvider">
+            <summary>
+            Identifies the database engine that the application should use for persistence.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.DatabaseProvider.Sqlite">
+            <summary>SQLite embedded database.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.DatabaseProvider.PostgreSql">
+            <summary>PostgreSQL server database.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Enums.PaperSize">
+            <summary>
+            Identifies the paper size used when printing receipts and reports.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.PaperSize.Receipt80mm">
+            <summary>80mm wide thermal receipt paper.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.PaperSize.Receipt58mm">
+            <summary>58mm wide thermal receipt paper.</summary>
+        </member>
+        <member name="F:SmartPOS.Core.Enums.PaperSize.A4">
+            <summary>Standard A4 sheet.</summary>
+        </member>
+        <member name="T:SmartPOS.Core.Extensions.CollectionExtensions">
+            <summary>
+            Provides extension methods for collection types.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Core.Extensions.CollectionExtensions.NullToEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>Returns an empty read-only list when the supplied enumerable is null; otherwise returns the enumerable as a read-only list.</summary>
+            <typeparam name="T">The element type.</typeparam>
+            <param name="source">The enumerable to safeguard.</param>
+            <returns>A read-only list that is never <see langword="null" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Extensions.CollectionExtensions.IsNullOrEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>Determines whether the supplied enumerable is null or contains no elements.</summary>
+            <typeparam name="T">The element type.</typeparam>
+            <param name="source">The enumerable to check.</param>
+            <returns><see langword="true" /> when the enumerable is null or empty; otherwise <see langword="false" />.</returns>
+        </member>
+        <member name="T:SmartPOS.Core.Extensions.StringExtensions">
+            <summary>
+            Provides extension methods for <see cref="T:System.String" /> values.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Core.Extensions.StringExtensions.NullToEmpty(System.String)">
+            <summary>Returns <see cref="F:System.String.Empty" /> when the supplied value is null; otherwise returns the value unchanged.</summary>
+            <param name="value">The string to safeguard.</param>
+            <returns>A string that is never <see langword="null" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Extensions.StringExtensions.TrimToNull(System.String)">
+            <summary>Trims the supplied string and returns <see langword="null" /> when the result is empty.</summary>
+            <param name="value">The string to trim.</param>
+            <returns>The trimmed string, or <see langword="null" /> when the trimmed result is empty.</returns>
+        </member>
+        <member name="T:SmartPOS.Core.Guards.Guard">
+            <summary>
+            Provides guard-clause validation that throws <see cref="T:System.ArgumentException" /> or <see cref="T:System.ArgumentNullException" /> when a precondition is violated.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Core.Guards.Guard.AgainstNull``1(``0,System.String)">
+            <summary>Throws <see cref="T:System.ArgumentNullException" /> when the supplied value is <see langword="null" />.</summary>
+            <typeparam name="T">The type of the value.</typeparam>
+            <param name="value">The value to check.</param>
+            <param name="paramName">The name of the parameter being guarded.</param>
+            <returns>The non-null value.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Guards.Guard.AgainstNullOrWhiteSpace(System.String,System.String)">
+            <summary>Throws <see cref="T:System.ArgumentException" /> when the supplied string is null, empty, or whitespace.</summary>
+            <param name="value">The string to check.</param>
+            <param name="paramName">The name of the parameter being guarded.</param>
+            <returns>The non-empty string.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Guards.Guard.AgainstNegative(System.Int32,System.Int32,System.String)">
+            <summary>Throws <see cref="T:System.ArgumentOutOfRangeException" /> when the supplied value is less than the specified minimum.</summary>
+            <param name="value">The value to check.</param>
+            <param name="min">The inclusive minimum allowed value.</param>
+            <param name="paramName">The name of the parameter being guarded.</param>
+            <returns>The value, guaranteed to be at least <paramref name="min" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Guards.Guard.AgainstEmpty``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>Throws <see cref="T:System.ArgumentException" /> when the supplied enumerable is null or empty.</summary>
+            <typeparam name="T">The element type of the enumerable.</typeparam>
+            <param name="value">The enumerable to check.</param>
+            <param name="paramName">The name of the parameter being guarded.</param>
+            <returns>The non-empty enumerable.</returns>
+        </member>
+        <member name="T:SmartPOS.Core.Helpers.DateTimeHelper">
+            <summary>
+            Provides helper utilities for working with date and time values.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Core.Helpers.DateTimeHelper.UtcNow">
+            <summary>Gets the current UTC date and time.</summary>
+        </member>
+        <member name="P:SmartPOS.Core.Helpers.DateTimeHelper.UtcToday">
+            <summary>Gets the current UTC date with the time component set to midnight.</summary>
+        </member>
+        <member name="M:SmartPOS.Core.Helpers.DateTimeHelper.ToUnixEpochSeconds(System.DateTime)">
+            <summary>Converts the supplied date to a Unix epoch timestamp expressed in seconds.</summary>
+            <param name="value">The date to convert.</param>
+            <returns>The number of seconds elapsed since 1970-01-01T00:00:00Z.</returns>
+        </member>
+        <member name="T:SmartPOS.Core.Helpers.GuidHelper">
+            <summary>
+            Provides helper utilities for working with <see cref="T:System.Guid" /> values.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Core.Helpers.GuidHelper.IsEmpty(System.Guid)">
+            <summary>Gets a value indicating whether the supplied identifier is empty.</summary>
+            <param name="value">The identifier to check.</param>
+            <returns><see langword="true" /> when the identifier equals <see cref="F:System.Guid.Empty" />; otherwise <see langword="false" />.</returns>
+        </member>
+        <member name="M:SmartPOS.Core.Helpers.GuidHelper.IsNotEmpty(System.Guid)">
+            <summary>Gets a value indicating whether the supplied identifier is a non-empty value.</summary>
+            <param name="value">The identifier to check.</param>
+            <returns><see langword="true" /> when the identifier is not <see cref="F:System.Guid.Empty" />; otherwise <see langword="false" />.</returns>
+        </member>
+    </members>
+</doc>

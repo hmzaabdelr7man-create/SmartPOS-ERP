@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartPOS.Application</name>
+    </assembly>
+    <members>
+        <member name="T:SmartPOS.Application.Abstractions.Backup.BackupDescriptor">
+            <summary>
+            Describes a backup archive produced by an <see cref="T:SmartPOS.Application.Abstractions.Backup.IBackupService" />.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Backup.BackupDescriptor.FilePath">
+            <summary>Gets or sets the full path of the backup archive.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Backup.BackupDescriptor.SizeBytes">
+            <summary>Gets or sets the size, in bytes, of the backup archive.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Backup.BackupDescriptor.CreatedAtUtc">
+            <summary>Gets or sets the UTC date and time the backup was created.</summary>
+        </member>
+        <member name="T:SmartPOS.Application.Abstractions.Backup.IBackupService">
+            <summary>
+            Creates and manages application backup archives.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.Abstractions.Backup.IBackupService.CreateBackupAsync(System.Threading.CancellationToken)">
+            <summary>Creates a backup archive of the application data.</summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A descriptor of the created backup archive.</returns>
+        </member>
+        <member name="M:SmartPOS.Application.Abstractions.Backup.IBackupService.ListBackupsAsync(System.Threading.CancellationToken)">
+            <summary>Gets the list of backup archives currently retained.</summary>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A read-only list of backup descriptors.</returns>
+        </member>
+        <member name="T:SmartPOS.Application.Abstractions.Barcode.IBarcodeGenerator">
+            <summary>
+            Generates barcode images from encoded values.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.Abstractions.Barcode.IBarcodeGenerator.Generate(System.String,SmartPOS.Core.Enums.BarcodeSymbology,System.Int32,System.Int32)">
+            <summary>Generates a barcode image for the supplied value using the specified symbology.</summary>
+            <param name="value">The value to encode in the barcode.</param>
+            <param name="symbology">The symbology used to encode the value.</param>
+            <param name="width">The width, in pixels, of the generated image.</param>
+            <param name="height">The height, in pixels, of the generated image.</param>
+            <returns>A PNG stream containing the generated barcode image.</returns>
+        </member>
+        <member name="T:SmartPOS.Application.Abstractions.Printing.IPrintService">
+            <summary>
+            Submits print jobs to a physical or virtual printer.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.Abstractions.Printing.IPrintService.PrintAsync(System.IO.Stream,SmartPOS.Application.Abstractions.Printing.PrintJobOptions,System.Threading.CancellationToken)">
+            <summary>Prints the supplied document stream using the specified options.</summary>
+            <param name="document">A stream containing the document to print.</param>
+            <param name="options">The options that describe how the document should be printed.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A task that represents the asynchronous print operation.</returns>
+        </member>
+        <member name="T:SmartPOS.Application.Abstractions.Printing.PrintJobOptions">
+            <summary>
+            Describes the options used when submitting a print job.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Printing.PrintJobOptions.PrinterName">
+            <summary>Gets or sets the name of the printer that should receive the job.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Printing.PrintJobOptions.PaperSize">
+            <summary>Gets or sets the paper size to use for the job.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Printing.PrintJobOptions.Copies">
+            <summary>Gets or sets the number of copies to print.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Printing.PrintJobOptions.ShowDialog">
+            <summary>Gets or sets a value indicating whether a print dialog should be shown before printing.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Printing.PrintJobOptions.ShowPreview">
+            <summary>Gets or sets a value indicating whether a print preview should be shown before printing.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Printing.PrintJobOptions.Title">
+            <summary>Gets or sets the title of the print job.</summary>
+        </member>
+        <member name="T:SmartPOS.Application.Abstractions.Reporting.IReportDefinition">
+            <summary>
+            Describes a report that can be rendered by an <see cref="T:SmartPOS.Application.Abstractions.Reporting.IReportRenderer" />.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Reporting.IReportDefinition.Title">
+            <summary>Gets the user-facing title of the report.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Reporting.IReportDefinition.Key">
+            <summary>Gets the culture-invariant identifier of the report.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Abstractions.Reporting.IReportDefinition.Data">
+            <summary>Gets the data that should be rendered by the report.</summary>
+        </member>
+        <member name="T:SmartPOS.Application.Abstractions.Reporting.IReportRenderer">
+            <summary>
+            Renders report definitions into the requested output format.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.Abstractions.Reporting.IReportRenderer.RenderAsync(SmartPOS.Application.Abstractions.Reporting.IReportDefinition,SmartPOS.Application.Abstractions.Reporting.ReportFormat,System.Threading.CancellationToken)">
+            <summary>Renders the supplied report definition into a stream.</summary>
+            <param name="definition">The report definition to render.</param>
+            <param name="format">The output format to produce.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A stream containing the rendered report.</returns>
+        </member>
+        <member name="T:SmartPOS.Application.Abstractions.Reporting.ReportFormat">
+            <summary>
+            The output format produced by an <see cref="T:SmartPOS.Application.Abstractions.Reporting.IReportRenderer"/>.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Application.Abstractions.Reporting.ReportFormat.Pdf">
+            <summary>Portable Document Format.</summary>
+        </member>
+        <member name="F:SmartPOS.Application.Abstractions.Reporting.ReportFormat.Text">
+            <summary>Plain text, suitable for thermal printers.</summary>
+        </member>
+        <member name="F:SmartPOS.Application.Abstractions.Reporting.ReportFormat.Html">
+            <summary>HTML preview shown in a browser control.</summary>
+        </member>
+        <member name="T:SmartPOS.Application.Common.Exceptions.ApplicationException">
+            <summary>
+            The base exception thrown by the application layer when an operation cannot be completed.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.Common.Exceptions.ApplicationException.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Application.Common.Exceptions.ApplicationException" /> class with a specified error message.</summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:SmartPOS.Application.Common.Exceptions.ApplicationException.#ctor(System.String,System.Exception)">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Application.Common.Exceptions.ApplicationException" /> class with a specified error message and a reference to the inner exception that caused this exception.</summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:SmartPOS.Application.Common.Exceptions.ExceptionHandler">
+            <summary>
+            Default implementation of <see cref="T:SmartPOS.Contracts.Errors.IExceptionHandler" /> that maps common exception types to user-facing error information.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.Common.Exceptions.ExceptionHandler.Handle(System.Exception)">
+            <inheritdoc />
+        </member>
+        <member name="T:SmartPOS.Application.Common.Exceptions.ForbiddenException">
+            <summary>
+            The exception that is thrown when the current user is not permitted to perform an operation.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.Common.Exceptions.ForbiddenException.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Application.Common.Exceptions.ForbiddenException" /> class with a specified error message.</summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="T:SmartPOS.Application.Common.Exceptions.NotFoundException">
+            <summary>
+            The exception that is thrown when a requested entity cannot be found.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.Common.Exceptions.NotFoundException.#ctor(System.String,System.Object)">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Application.Common.Exceptions.NotFoundException" /> class.</summary>
+            <param name="entityName">The name of the entity type that was not found.</param>
+            <param name="key">The key that was used to locate the entity.</param>
+        </member>
+        <member name="P:SmartPOS.Application.Common.Exceptions.NotFoundException.EntityName">
+            <summary>Gets the name of the entity type that was not found.</summary>
+        </member>
+        <member name="P:SmartPOS.Application.Common.Exceptions.NotFoundException.Key">
+            <summary>Gets the key that was used to locate the entity.</summary>
+        </member>
+        <member name="T:SmartPOS.Application.CQRS.Behaviors.ValidationPipelineBehavior`2">
+            <summary>
+            A pipeline behavior that validates requests using all matching FluentValidation validators before forwarding the request.
+            </summary>
+            <typeparam name="TRequest">The type of the request being validated.</typeparam>
+            <typeparam name="TResponse">The type of the response produced by the request.</typeparam>
+        </member>
+        <member name="M:SmartPOS.Application.CQRS.Behaviors.ValidationPipelineBehavior`2.#ctor(System.Collections.Generic.IEnumerable{FluentValidation.IValidator{`0}},Microsoft.Extensions.Logging.ILogger{SmartPOS.Application.CQRS.Behaviors.ValidationPipelineBehavior{`0,`1}})">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Application.CQRS.Behaviors.ValidationPipelineBehavior`2" /> class.</summary>
+            <param name="validators">The validators applicable to the request type.</param>
+            <param name="logger">The logger used to record validation failures.</param>
+        </member>
+        <member name="M:SmartPOS.Application.CQRS.Behaviors.ValidationPipelineBehavior`2.Handle(`0,MediatR.RequestHandlerDelegate{`1},System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:SmartPOS.Application.CQRS.Commands.ICommand`1">
+            <summary>
+            Marks a command that returns a value of type <typeparamref name="TResponse" />.
+            </summary>
+            <typeparam name="TResponse">The type of the value returned by the command.</typeparam>
+        </member>
+        <member name="T:SmartPOS.Application.CQRS.Commands.ICommand">
+            <summary>
+            Marks a command that does not return a value.
+            </summary>
+        </member>
+        <member name="T:SmartPOS.Application.CQRS.Queries.IQuery`1">
+            <summary>
+            Marks a query that returns a value of type <typeparamref name="TResponse" />.
+            </summary>
+            <typeparam name="TResponse">The type of the value returned by the query.</typeparam>
+        </member>
+        <member name="T:SmartPOS.Application.DependencyInjection">
+            <summary>
+            Extension methods that register the application layer services with the dependency injection container.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.DependencyInjection.AddApplication(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly)">
+            <summary>Registers MediatR, FluentValidation validators, AutoMapper profiles and the exception handler with the service collection.</summary>
+            <param name="services">The service collection to configure.</param>
+            <param name="assembly">The assembly to scan for handlers, validators and profiles. Defaults to the calling assembly when <see langword="null" />.</param>
+            <returns>The configured service collection.</returns>
+        </member>
+        <member name="T:SmartPOS.Application.Mapping.MappingProfileBase">
+            <summary>
+            Base class for AutoMapper profiles that map between domain entities and application contracts.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Application.Mapping.MappingProfileBase.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:SmartPOS.Application.Mapping.MappingProfileBase" /> class.</summary>
+        </member>
+    </members>
+</doc>

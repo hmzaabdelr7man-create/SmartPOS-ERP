@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartPOS.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:SmartPOS.Contracts.Errors.ErrorSeverity">
+            <summary>
+            Defines the severity of an error reported to the user interface.
+            </summary>
+        </member>
+        <member name="F:SmartPOS.Contracts.Errors.ErrorSeverity.Information">
+            <summary>An informational message that does not represent a failure.</summary>
+        </member>
+        <member name="F:SmartPOS.Contracts.Errors.ErrorSeverity.Warning">
+            <summary>A warning that an operation completed with caveats.</summary>
+        </member>
+        <member name="F:SmartPOS.Contracts.Errors.ErrorSeverity.Error">
+            <summary>An error that prevented an operation from completing.</summary>
+        </member>
+        <member name="F:SmartPOS.Contracts.Errors.ErrorSeverity.Critical">
+            <summary>A critical error that compromises application integrity.</summary>
+        </member>
+        <member name="T:SmartPOS.Contracts.Errors.ErrorInfo">
+            <summary>
+            Describes an error that should be presented to the user.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Contracts.Errors.ErrorInfo.Title">
+            <summary>Gets or sets the short title of the error.</summary>
+        </member>
+        <member name="P:SmartPOS.Contracts.Errors.ErrorInfo.Message">
+            <summary>Gets or sets the detailed message of the error.</summary>
+        </member>
+        <member name="P:SmartPOS.Contracts.Errors.ErrorInfo.Severity">
+            <summary>Gets or sets the severity of the error.</summary>
+        </member>
+        <member name="T:SmartPOS.Contracts.Errors.IExceptionHandler">
+            <summary>
+            Defines a service that translates exceptions into user-facing <see cref="T:SmartPOS.Contracts.Errors.ErrorInfo" /> instances.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Contracts.Errors.IExceptionHandler.Handle(System.Exception)">
+            <summary>Maps the supplied exception to an <see cref="T:SmartPOS.Contracts.Errors.ErrorInfo" /> instance.</summary>
+            <param name="exception">The exception to translate.</param>
+            <returns>An <see cref="T:SmartPOS.Contracts.Errors.ErrorInfo" /> describing the exception.</returns>
+        </member>
+        <member name="T:SmartPOS.Contracts.Services.ILanguageService">
+            <summary>
+            Provides control over the display language applied to the user interface.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Contracts.Services.ILanguageService.CurrentLanguage">
+            <summary>Gets the currently applied display language.</summary>
+        </member>
+        <member name="M:SmartPOS.Contracts.Services.ILanguageService.ApplyLanguage(SmartPOS.Core.Enums.AppLanguage)">
+            <summary>Applies the supplied language to the user interface.</summary>
+            <param name="language">The language to apply.</param>
+        </member>
+        <member name="M:SmartPOS.Contracts.Services.ILanguageService.Toggle">
+            <summary>Toggles between the Arabic and English languages.</summary>
+            <returns>The language that is now active.</returns>
+        </member>
+        <member name="E:SmartPOS.Contracts.Services.ILanguageService.LanguageChanged">
+            <summary>Occurs when the active language has changed.</summary>
+        </member>
+        <member name="T:SmartPOS.Contracts.Services.ISettingsService">
+            <summary>
+            Provides read and write access to user-scoped application settings.
+            </summary>
+        </member>
+        <member name="M:SmartPOS.Contracts.Services.ISettingsService.GetAsync``1(System.Threading.CancellationToken)">
+            <summary>Gets the current value of a settings section.</summary>
+            <typeparam name="T">The type of the settings section.</typeparam>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>The settings section value if present; otherwise a default instance.</returns>
+        </member>
+        <member name="M:SmartPOS.Contracts.Services.ISettingsService.SetAsync``1(``0,System.Threading.CancellationToken)">
+            <summary>Persists a typed settings section to the user override file.</summary>
+            <typeparam name="T">The type of the settings section.</typeparam>
+            <param name="value">The settings section value to persist.</param>
+            <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
+            <returns>A task that represents the asynchronous set operation.</returns>
+        </member>
+        <member name="T:SmartPOS.Contracts.Services.IThemeService">
+            <summary>
+            Provides control over the visual theme applied to the user interface.
+            </summary>
+        </member>
+        <member name="P:SmartPOS.Contracts.Services.IThemeService.CurrentTheme">
+            <summary>Gets the currently applied theme.</summary>
+        </member>
+        <member name="M:SmartPOS.Contracts.Services.IThemeService.ApplyTheme(SmartPOS.Core.Enums.AppTheme)">
+            <summary>Applies the supplied theme to the user interface.</summary>
+            <param name="theme">The theme to apply.</param>
+        </member>
+        <member name="M:SmartPOS.Contracts.Services.IThemeService.Toggle">
+            <summary>Toggles between the light and dark themes.</summary>
+            <returns>The theme that is now active.</returns>
+        </member>
+        <member name="E:SmartPOS.Contracts.Services.IThemeService.ThemeChanged">
+            <summary>Occurs when the active theme has changed.</summary>
+        </member>
+    </members>
+</doc>
