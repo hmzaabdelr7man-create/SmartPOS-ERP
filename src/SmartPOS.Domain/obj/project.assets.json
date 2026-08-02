@@ -1,59 +1,50 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
-    "net8.0": {
-      "SmartPOS.Core/1.0.0-sprint2": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/SmartPOS.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SmartPOS.Core.dll": {}
-        }
-      }
-    }
+    "net8.0": {}
   },
-  "libraries": {
-    "SmartPOS.Core/1.0.0-sprint2": {
-      "type": "project",
-      "path": "../SmartPOS.Core/SmartPOS.Core.csproj",
-      "msbuildProject": "../SmartPOS.Core/SmartPOS.Core.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
     "net8.0": [
-      "SmartPOS.Core >= 1.0.0-sprint2"
+      "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj"
     ]
   },
   "packageFolders": {
-    "/home/appuser/.nuget/packages/": {}
+    "C:\\Users\\Hmza\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0-sprint2",
     "restore": {
-      "projectUniqueName": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj",
+      "projectUniqueName": "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj",
       "projectName": "SmartPOS.Domain",
-      "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj",
-      "packagesPath": "/home/appuser/.nuget/packages/",
-      "outputPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/obj/",
+      "projectPath": "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj",
+      "packagesPath": "C:\\Users\\Hmza\\.nuget\\packages\\",
+      "outputPath": "E:\\project\\src\\SmartPOS.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "centralPackageVersionsManagementEnabled": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/appuser/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Hmza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj": {
-              "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj"
+            "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj": {
+              "projectPath": "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj"
             }
           }
         }
@@ -71,10 +62,12 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net8.0": {
+        "framework": "net8.0",
         "targetAlias": "net8.0",
         "centralPackageVersions": {
           "AutoMapper": "14.0.0",
@@ -137,8 +130,19 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/appuser/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

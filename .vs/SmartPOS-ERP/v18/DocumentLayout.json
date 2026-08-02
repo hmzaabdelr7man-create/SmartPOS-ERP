@@ -19,7 +19,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SmartPOS.Application",
+              "Title": "SmartPOS.Application.csproj",
               "DocumentMoniker": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj",
               "RelativeDocumentMoniker": "src\\SmartPOS.Application\\SmartPOS.Application.csproj",
               "ToolTip": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj",

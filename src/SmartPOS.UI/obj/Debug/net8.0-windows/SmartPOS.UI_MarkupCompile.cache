@@ -1,20 +1,20 @@
-SmartPOS.UI
-
+﻿SmartPOS.UI
+1.0.0.0
 
 winexe
 C#
 .cs
-/tmp/cc-agent/69252008/project/src/SmartPOS.UI/obj/Debug/net8.0-windows/
+E:\project\src\SmartPOS.UI\obj\Debug\net8.0-windows\
 SmartPOS.UI
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-/tmp/cc-agent/69252008/project/src/SmartPOS.UI/App.xaml
-8-476624368
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+E:\project\src\SmartPOS.UI\App.xaml
+121707315463
 
-14-275186269
-270-1847645027
-Resources/Localization/Strings.ar.xaml;Resources/Localization/Strings.en.xaml;Themes/DarkTheme.xaml;Themes/LightTheme.xaml;Views/LoginWindow.xaml;Views/Pages/HomePage.xaml;Views/ShellWindow.xaml;Views/SplashScreen.xaml;
+20-1800501778
+270-261732015
+Localization\Strings.ar.xaml;Localization\Strings.en.xaml;Resources\Localization\Strings.ar.xaml;Resources\Localization\Strings.en.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\Pages\DashboardPage.xaml;Views\Pages\HomePage.xaml;Views\ShellWindow.xaml;Views\SplashScreen.xaml;
 
 False
 

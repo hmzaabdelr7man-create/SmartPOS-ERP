@@ -1,40 +1,47 @@
 {
   "format": 1,
   "restore": {
-    "/tmp/cc-agent/69252008/project/src/SmartPOS.Tests/SmartPOS.Tests.csproj": {}
+    "E:\\project\\src\\SmartPOS.Tests\\SmartPOS.Tests.csproj": {}
   },
   "projects": {
-    "/tmp/cc-agent/69252008/project/src/SmartPOS.Application/SmartPOS.Application.csproj": {
+    "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj": {
       "version": "1.0.0-sprint2",
       "restore": {
-        "projectUniqueName": "/tmp/cc-agent/69252008/project/src/SmartPOS.Application/SmartPOS.Application.csproj",
+        "projectUniqueName": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj",
         "projectName": "SmartPOS.Application",
-        "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Application/SmartPOS.Application.csproj",
-        "packagesPath": "/home/appuser/.nuget/packages/",
-        "outputPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Application/obj/",
+        "projectPath": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj",
+        "packagesPath": "C:\\Users\\Hmza\\.nuget\\packages\\",
+        "outputPath": "E:\\project\\src\\SmartPOS.Application\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/appuser/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Hmza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/SmartPOS.Contracts.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/SmartPOS.Contracts.csproj"
+              "E:\\project\\src\\SmartPOS.Contracts\\SmartPOS.Contracts.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Contracts\\SmartPOS.Contracts.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj"
+              "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj"
+              "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj"
               }
             }
           }
@@ -52,10 +59,12 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "AutoMapper": {
@@ -155,258 +164,45 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/appuser/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/SmartPOS.Contracts.csproj": {
+    "E:\\project\\src\\SmartPOS.Database\\SmartPOS.Database.csproj": {
       "version": "1.0.0-sprint2",
       "restore": {
-        "projectUniqueName": "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/SmartPOS.Contracts.csproj",
-        "projectName": "SmartPOS.Contracts",
-        "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/SmartPOS.Contracts.csproj",
-        "packagesPath": "/home/appuser/.nuget/packages/",
-        "outputPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/obj/",
-        "projectStyle": "PackageReference",
-        "centralPackageVersionsManagementEnabled": true,
-        "configFilePaths": [
-          "/home/appuser/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "allWarningsAsErrors": true,
-          "noWarn": [
-            "NU1903"
-          ],
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "centralPackageVersions": {
-            "AutoMapper": "14.0.0",
-            "CommunityToolkit.Mvvm": "8.3.2",
-            "FluentAssertions": "6.12.1",
-            "FluentValidation": "11.10.0",
-            "FluentValidation.DependencyInjectionExtensions": "11.10.0",
-            "MediatR": "12.4.1",
-            "MediatR.Contracts": "2.0.1",
-            "Microsoft.Data.Sqlite": "8.0.10",
-            "Microsoft.EntityFrameworkCore": "8.0.10",
-            "Microsoft.EntityFrameworkCore.Design": "8.0.10",
-            "Microsoft.EntityFrameworkCore.InMemory": "8.0.10",
-            "Microsoft.EntityFrameworkCore.Relational": "8.0.10",
-            "Microsoft.EntityFrameworkCore.Sqlite": "8.0.10",
-            "Microsoft.EntityFrameworkCore.Sqlite.Core": "8.0.10",
-            "Microsoft.Extensions.Configuration": "8.0.0",
-            "Microsoft.Extensions.Configuration.Binder": "8.0.2",
-            "Microsoft.Extensions.Configuration.Json": "8.0.1",
-            "Microsoft.Extensions.DependencyInjection": "8.0.1",
-            "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
-            "Microsoft.Extensions.Hosting": "8.0.0",
-            "Microsoft.Extensions.Logging": "8.0.1",
-            "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
-            "Microsoft.Extensions.Logging.Console": "8.0.1",
-            "Microsoft.Extensions.Logging.Debug": "8.0.1",
-            "Microsoft.Extensions.Options": "8.0.2",
-            "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
-            "Microsoft.NET.Test.Sdk": "17.11.1",
-            "Moq": "4.20.72",
-            "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10",
-            "QRCoder": "1.6.0",
-            "QuestPDF": "2024.10.2",
-            "Roslynator.Analyzers": "4.12.9",
-            "Serilog": "4.0.2",
-            "Serilog.Extensions.Hosting": "8.0.0",
-            "Serilog.Extensions.Logging": "8.0.0",
-            "Serilog.Settings.Configuration": "8.0.4",
-            "Serilog.Sinks.Console": "6.0.0",
-            "Serilog.Sinks.File": "6.0.0",
-            "StyleCop.Analyzers": "1.2.0-beta.556",
-            "System.Text.Json": "8.0.5",
-            "xunit": "2.9.2",
-            "xunit.runner.visualstudio": "2.8.2",
-            "ZXing.Net": "0.16.9"
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/home/appuser/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj": {
-      "version": "1.0.0-sprint2",
-      "restore": {
-        "projectUniqueName": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj",
-        "projectName": "SmartPOS.Core",
-        "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj",
-        "packagesPath": "/home/appuser/.nuget/packages/",
-        "outputPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/obj/",
-        "projectStyle": "PackageReference",
-        "centralPackageVersionsManagementEnabled": true,
-        "configFilePaths": [
-          "/home/appuser/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "allWarningsAsErrors": true,
-          "noWarn": [
-            "NU1903"
-          ],
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "centralPackageVersions": {
-            "AutoMapper": "14.0.0",
-            "CommunityToolkit.Mvvm": "8.3.2",
-            "FluentAssertions": "6.12.1",
-            "FluentValidation": "11.10.0",
-            "FluentValidation.DependencyInjectionExtensions": "11.10.0",
-            "MediatR": "12.4.1",
-            "MediatR.Contracts": "2.0.1",
-            "Microsoft.Data.Sqlite": "8.0.10",
-            "Microsoft.EntityFrameworkCore": "8.0.10",
-            "Microsoft.EntityFrameworkCore.Design": "8.0.10",
-            "Microsoft.EntityFrameworkCore.InMemory": "8.0.10",
-            "Microsoft.EntityFrameworkCore.Relational": "8.0.10",
-            "Microsoft.EntityFrameworkCore.Sqlite": "8.0.10",
-            "Microsoft.EntityFrameworkCore.Sqlite.Core": "8.0.10",
-            "Microsoft.Extensions.Configuration": "8.0.0",
-            "Microsoft.Extensions.Configuration.Binder": "8.0.2",
-            "Microsoft.Extensions.Configuration.Json": "8.0.1",
-            "Microsoft.Extensions.DependencyInjection": "8.0.1",
-            "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
-            "Microsoft.Extensions.Hosting": "8.0.0",
-            "Microsoft.Extensions.Logging": "8.0.1",
-            "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
-            "Microsoft.Extensions.Logging.Console": "8.0.1",
-            "Microsoft.Extensions.Logging.Debug": "8.0.1",
-            "Microsoft.Extensions.Options": "8.0.2",
-            "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
-            "Microsoft.NET.Test.Sdk": "17.11.1",
-            "Moq": "4.20.72",
-            "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10",
-            "QRCoder": "1.6.0",
-            "QuestPDF": "2024.10.2",
-            "Roslynator.Analyzers": "4.12.9",
-            "Serilog": "4.0.2",
-            "Serilog.Extensions.Hosting": "8.0.0",
-            "Serilog.Extensions.Logging": "8.0.0",
-            "Serilog.Settings.Configuration": "8.0.4",
-            "Serilog.Sinks.Console": "6.0.0",
-            "Serilog.Sinks.File": "6.0.0",
-            "StyleCop.Analyzers": "1.2.0-beta.556",
-            "System.Text.Json": "8.0.5",
-            "xunit": "2.9.2",
-            "xunit.runner.visualstudio": "2.8.2",
-            "ZXing.Net": "0.16.9"
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/home/appuser/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/tmp/cc-agent/69252008/project/src/SmartPOS.Database/SmartPOS.Database.csproj": {
-      "version": "1.0.0-sprint2",
-      "restore": {
-        "projectUniqueName": "/tmp/cc-agent/69252008/project/src/SmartPOS.Database/SmartPOS.Database.csproj",
+        "projectUniqueName": "E:\\project\\src\\SmartPOS.Database\\SmartPOS.Database.csproj",
         "projectName": "SmartPOS.Database",
-        "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Database/SmartPOS.Database.csproj",
-        "packagesPath": "/home/appuser/.nuget/packages/",
-        "outputPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Database/obj/",
+        "projectPath": "E:\\project\\src\\SmartPOS.Database\\SmartPOS.Database.csproj",
+        "packagesPath": "C:\\Users\\Hmza\\.nuget\\packages\\",
+        "outputPath": "E:\\project\\src\\SmartPOS.Database\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/appuser/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Hmza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj"
+              "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj"
+              "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj"
               }
             }
           }
@@ -424,10 +220,12 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.Data.Sqlite": {
@@ -538,35 +336,42 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/appuser/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj": {
+    "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj": {
       "version": "1.0.0-sprint2",
       "restore": {
-        "projectUniqueName": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj",
+        "projectUniqueName": "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj",
         "projectName": "SmartPOS.Domain",
-        "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj",
-        "packagesPath": "/home/appuser/.nuget/packages/",
-        "outputPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/obj/",
+        "projectPath": "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj",
+        "packagesPath": "C:\\Users\\Hmza\\.nuget\\packages\\",
+        "outputPath": "E:\\project\\src\\SmartPOS.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/appuser/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Hmza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj"
+              "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj"
               }
             }
           }
@@ -584,10 +389,12 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "centralPackageVersions": {
             "AutoMapper": "14.0.0",
@@ -650,47 +457,54 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/appuser/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/tmp/cc-agent/69252008/project/src/SmartPOS.Infrastructure/SmartPOS.Infrastructure.csproj": {
+    "E:\\project\\src\\SmartPOS.Infrastructure\\SmartPOS.Infrastructure.csproj": {
       "version": "1.0.0-sprint2",
       "restore": {
-        "projectUniqueName": "/tmp/cc-agent/69252008/project/src/SmartPOS.Infrastructure/SmartPOS.Infrastructure.csproj",
+        "projectUniqueName": "E:\\project\\src\\SmartPOS.Infrastructure\\SmartPOS.Infrastructure.csproj",
         "projectName": "SmartPOS.Infrastructure",
-        "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Infrastructure/SmartPOS.Infrastructure.csproj",
-        "packagesPath": "/home/appuser/.nuget/packages/",
-        "outputPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Infrastructure/obj/",
+        "projectPath": "E:\\project\\src\\SmartPOS.Infrastructure\\SmartPOS.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Hmza\\.nuget\\packages\\",
+        "outputPath": "E:\\project\\src\\SmartPOS.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/appuser/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Hmza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Application/SmartPOS.Application.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Application/SmartPOS.Application.csproj"
+              "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/SmartPOS.Contracts.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/SmartPOS.Contracts.csproj"
+              "E:\\project\\src\\SmartPOS.Contracts\\SmartPOS.Contracts.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Contracts\\SmartPOS.Contracts.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj"
+              "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Database/SmartPOS.Database.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Database/SmartPOS.Database.csproj"
+              "E:\\project\\src\\SmartPOS.Database\\SmartPOS.Database.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Database\\SmartPOS.Database.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj"
+              "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj"
               }
             }
           }
@@ -708,10 +522,12 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
@@ -836,47 +652,54 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/appuser/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/tmp/cc-agent/69252008/project/src/SmartPOS.Tests/SmartPOS.Tests.csproj": {
+    "E:\\project\\src\\SmartPOS.Tests\\SmartPOS.Tests.csproj": {
       "version": "1.0.0-sprint2",
       "restore": {
-        "projectUniqueName": "/tmp/cc-agent/69252008/project/src/SmartPOS.Tests/SmartPOS.Tests.csproj",
+        "projectUniqueName": "E:\\project\\src\\SmartPOS.Tests\\SmartPOS.Tests.csproj",
         "projectName": "SmartPOS.Tests",
-        "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Tests/SmartPOS.Tests.csproj",
-        "packagesPath": "/home/appuser/.nuget/packages/",
-        "outputPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Tests/obj/",
+        "projectPath": "E:\\project\\src\\SmartPOS.Tests\\SmartPOS.Tests.csproj",
+        "packagesPath": "C:\\Users\\Hmza\\.nuget\\packages\\",
+        "outputPath": "E:\\project\\src\\SmartPOS.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/appuser/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Hmza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
+            "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Application/SmartPOS.Application.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Application/SmartPOS.Application.csproj"
+              "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Application\\SmartPOS.Application.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/SmartPOS.Contracts.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Contracts/SmartPOS.Contracts.csproj"
+              "E:\\project\\src\\SmartPOS.Contracts\\SmartPOS.Contracts.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Contracts\\SmartPOS.Contracts.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Core/SmartPOS.Core.csproj"
+              "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Core\\SmartPOS.Core.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Domain/SmartPOS.Domain.csproj"
+              "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Domain\\SmartPOS.Domain.csproj"
               },
-              "/tmp/cc-agent/69252008/project/src/SmartPOS.Infrastructure/SmartPOS.Infrastructure.csproj": {
-                "projectPath": "/tmp/cc-agent/69252008/project/src/SmartPOS.Infrastructure/SmartPOS.Infrastructure.csproj"
+              "E:\\project\\src\\SmartPOS.Infrastructure\\SmartPOS.Infrastructure.csproj": {
+                "projectPath": "E:\\project\\src\\SmartPOS.Infrastructure\\SmartPOS.Infrastructure.csproj"
               }
             }
           }
@@ -894,10 +717,12 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
             "FluentAssertions": {
@@ -992,7 +817,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/appuser/.dotnet/sdk/8.0.423/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
